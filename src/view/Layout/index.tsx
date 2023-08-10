@@ -1,18 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // 引入样式
 import "./index.scss";
+
+// 引入组件
+import Aside from "./Aside";
 
 export default function Layout() {
   return (
     <>
       <section id="container">
         <aside>
-          <div>
-            <Link to="/">控制台</Link>
-          </div>
-          <div>
-            <Link to="/user">用户</Link>
-          </div>
+          <Aside />
         </aside>
         <section>
           <header>header</header>
