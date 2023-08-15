@@ -3,6 +3,7 @@ import { useRoutes, RouteObject, Navigate } from "react-router-dom";
 import Layout from "../view/Layout";
 import Home from "../view/Home";
 import User from "../view/User";
+import Login from "../view/Login";
 
 /**
  * 定义路由数组并暴露出去
@@ -14,12 +15,25 @@ export const routeArr: RouteObject[] = [
     element: <Navigate to="/layout/home"></Navigate>,
   },
   {
+    path: "/login",
+    element: <Login />,
+  },
+  {
     path: "/layout",
     element: <Layout />,
     label: "首页",
     children: [
       { path: "/layout/home", element: <Home />, label: "Home" },
       { path: "/layout/user", element: <User />, label: "个人信息" },
+    ],
+  },
+  {
+    path: "/xxx",
+    // element: <Layout />,
+    label: "测试",
+    children: [
+      { path: "/xxx/home", element: <Home />, label: "1111" },
+      { path: "/xxx/user", element: <User />, label: "2222" },
     ],
   },
 ];
